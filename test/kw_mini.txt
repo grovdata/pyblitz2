@@ -1,0 +1,7 @@
+ABCD
+ACos
+MouseWait
+Print
+ZoomX8
+ZoomXY
+
