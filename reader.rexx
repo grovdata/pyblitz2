@@ -14,7 +14,7 @@ IF Open(listhandle, listname,'READ') THEN DO UNTIL EOF(listhandle)
 		if rc~=0 then say "Load failed"
 		address TED_REXX1 'SAVE "bbfilename"'
 		if rc=0 then DO
-			if open(aschandle,ascfilename,'READ') then token=read(aschandle)
+			if open(aschandle,ascfilename,'READ') then token=readln(aschandle)
 			say line '=' c2x(token)
 			call close(aschandle)
 		end
