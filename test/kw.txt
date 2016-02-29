@@ -37,7 +37,7 @@ AddAppWindow
 AddFirst
 AddItem
 AddLast
-AddlDCMP
+AddIDCMP
 Addr
 AllFire
 AllocMem
@@ -158,7 +158,7 @@ CludgeSound
 ColSplit
 Colour
 ColourRequest
-CommoditieBase
+CommoditiesBase
 CommodityEvent
 Con_Base
 CookieMode
@@ -278,7 +278,7 @@ End Function
 End Setint
 End Statement
 EndIf
-EntryBit$
+EntryBits$
 EntryComment$
 EntryDate
 EntryDir
@@ -331,7 +331,6 @@ FadeInBitmap
 FadeOut
 FadePalette
 FadeStatus
-Fadeln
 False
 FastFree
 Fields
@@ -343,7 +342,6 @@ FileRequest$
 FileSeek
 FileSize
 FileStructure
-Filelnput
 FillMem
 FillPalette
 FillRexxMsg
@@ -410,13 +408,13 @@ GTString
 GTTags
 GTText
 GTToggle
-GTlnteger
+GTInteger
 GadgetBorder
 GadgetHit
 GadgetJam
 GadgetPens
 GadgetStatus
-GagetStatus
+GadgetStatus
 GameB
 Gameb
 Get
@@ -430,7 +428,6 @@ GetMedinstr
 GetReg
 GetResultString
 GetRexxCommand
-GetRexxComrnand
 GetRexxResult
 GetString$
 GetSuperBitMap
@@ -461,7 +458,6 @@ ILBMInfo
 ILBMPalette
 ILBMViewMode
 ILBMWidth
-ILBMlnfo
 ILLEGAL
 INCBIN
 INCDIR
@@ -526,7 +522,6 @@ Joyx
 Joyy
 JumpMed
 KeyCode
-Kililtem
 KillFile
 KillItem
 LCase$
@@ -551,7 +546,6 @@ List
 LoadAnim
 LoadBank
 LoadBitMap
-LoadBlikFont
 LoadBlitzFont
 LoadFont
 LoadIFF
@@ -575,7 +569,7 @@ MButtons
 MOVE
 MOVEA
 MOVEM
-MOVEO
+MOVEQ
 MOVEP
 MULS
 MULU
@@ -596,7 +590,6 @@ MenuHit
 MenuItem
 MenuState
 MenuTitle
-Menultem
 Menus
 Mid$
 MidHandle
@@ -663,7 +656,6 @@ PalBlue
 PalGreen
 PalRGB
 PalRed
-PaleneRange
 Palette
 PaletteInfo
 PaletteRange
@@ -710,7 +702,6 @@ PutIconObject
 PutReg
 PutSuperBitMap
 PutSuperBitmap
-PøP
 QAMIGA
 QAbs
 QAngle
@@ -749,6 +740,7 @@ RTEZMultiLoadFile
 RTEZPaletteRequest
 RTEZPathRequest
 RTEZRNextPathEntry
+RTNextPathEntry
 RTEZRequest
 RTEZSaveFile
 RTEZScreenModeRequest
@@ -879,7 +871,6 @@ SetString
 SetToolValue
 SetVProp
 SetVoice
-Setlnt
 Setzone
 Sgn
 Shape
@@ -890,7 +881,6 @@ ShapeSpriteHit
 ShapeSub
 ShapeToIcon
 ShapeWidth
-Shapeltem
 ShapesBitMap
 ShapesHit
 Shared
@@ -901,7 +891,7 @@ ShowBitmap
 ShowBlitz
 ShowF
 ShowPalette
-ShowRequestors
+ShowRequesters
 ShowScreen
 ShowSprite
 ShowStencil
@@ -942,7 +932,6 @@ SubHit
 SubIDCMP
 SubItem
 SubItemOff
-SubiDCIP
 Subitem
 SubitemOff
 SysJsr
@@ -1035,7 +1024,6 @@ WindowTags
 WindowWidth
 WindowX
 WindowY
-Windowloput
 Wline
 WriteBoot
 WriteFile
