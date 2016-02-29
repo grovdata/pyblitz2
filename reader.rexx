@@ -6,7 +6,7 @@ bbfilename='T:bla.bb2'
 contents=''
 IF Open(listhandle, listname,'READ') THEN DO UNTIL EOF(listhandle)
    line = ReadLn(listhandle)
-   SAY line
+   token=''
    if open(aschandle,ascfilename,'WRITE') then DO
    		call writeln(aschandle,line)
    		call close(aschandle)
@@ -18,6 +18,7 @@ IF Open(listhandle, listname,'READ') THEN DO UNTIL EOF(listhandle)
 			token=strip(token,'TRAILING','00'x)
 			say line '=' c2x(token)
 			call close(aschandle)
+			if token='' then say '###' line 'could not be tokenised'
 		end
    END
 
