@@ -15,6 +15,7 @@ IF Open(listhandle, listname,'READ') THEN DO UNTIL EOF(listhandle)
 		address TED_REXX1 'SAVE "bbfilename"'
 		if rc=0 then DO
 			if open(aschandle,ascfilename,'READ') then token=readln(aschandle)
+			token=strip(token,'TRAILING','00'x)
 			say line '=' c2x(token)
 			call close(aschandle)
 		end
