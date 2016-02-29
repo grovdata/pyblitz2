@@ -38,7 +38,6 @@ AddFirst
 AddItem
 AddLast
 AddlDCMP
-Addltem
 Addr
 AllFire
 AllocMem
@@ -151,7 +150,7 @@ CloseScreen
 CloseSerial
 CloseWindow
 ClrErr
-Clrlnt
+ClrInt
 Cls
 CludgeBitMap
 CludgeShapes
@@ -213,7 +212,6 @@ DecodeMedModule
 DecodePalette
 DecodeShapes
 DecodeSound
-DecodelLBM
 Decrypt
 Default
 DefaultInput
