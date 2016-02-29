@@ -25,6 +25,7 @@ def save(data):
 			if word in kwToToken.keys():
 				newLine = newLine.replace(word, kwToToken[word])
 		out += newLine + '\00'
+	print '\00\00'
 	print out
 
 if __name__ == '__main__':
