@@ -15,10 +15,10 @@ IF Open(listhandle, listname,'READ') THEN DO UNTIL EOF(listhandle)
 		if rc~=0 then say "Load failed"
 		address TED_REXX1 'SAVE "bbfilename"'
 		if rc=0 then DO
-			if open(aschandle,ascfilename,'READ') then token=readln(aschandle)
-			token=strip(token,'TRAILING','00'x)
+			if open(aschandle,ascfilename,'READ') then token=readch(aschandle,2)
+			/* token=strip(token,'TRAILING','00'x) */
 			call close(aschandle)
-			if token=line | token='' then say '###' line 'could not be tokenised'
+			if token=left(line,4) | token='' then say '###' line 'could not be tokenised'
 			else say line '=' c2x(token)
 		END
 	END
