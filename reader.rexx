@@ -6,6 +6,7 @@ bbfilename='T:bla.bb2'
 contents=''
 IF Open(listhandle, listname,'READ') THEN DO UNTIL EOF(listhandle)
    line = ReadLn(listhandle)
+   if strip(line)='' then iterate
    token=''
    if open(aschandle,ascfilename,'WRITE') then DO
    		call writeln(aschandle,line)
