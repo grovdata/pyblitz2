@@ -17,9 +17,9 @@ IF Open(listhandle, listname,'READ') THEN DO UNTIL EOF(listhandle)
 		if rc=0 then DO
 			if open(aschandle,ascfilename,'READ') then token=readln(aschandle)
 			token=strip(token,'TRAILING','00'x)
-			say line '=' c2x(token)
 			call close(aschandle)
-			if token='' then say '###' line 'could not be tokenised'
+			if token=line | token='' then say '###' line 'could not be tokenised'
+			else say line '=' c2x(token)
 		end
    END
 
