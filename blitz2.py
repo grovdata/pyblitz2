@@ -1,4 +1,5 @@
 import sys
+import StringIO
 
 kwToToken = dict()
 tokenToKw = dict()
@@ -16,20 +17,32 @@ def load_mapfile(filename):
 			tokenToKw[token] = keyword
 
 def save(data, outfile):
-	out = bytes()
-	lines = data.split('\n')
-	for line in lines:
-		newLine = line
-		words = line.split(' ')
-		for word in words:
-			if word in kwToToken.keys():
-				newLine = newLine.replace(word, kwToToken[word])
-		out += newLine + '\00'
-	out += '\00\00'
+	data = data.replace('\n', '\x00')
 
-	fd = open(outfile, "wb")
-	fd.write(out)
-	fd.close()
+	inf = StringIO.StringIO(data)
+	of  = open(outfile, "wb")
+	word = ''
+	eow = [' ', '(', '\x00']
+
+	while True:
+		c = inf.read(1)
+
+		if not c:
+			break
+
+		if c not in eow:
+			word += c
+		else:
+			if word in kwToToken.keys():
+				of.write(kwToToken[word])
+			else:
+				of.write(word)
+			word = ''
+			of.write(c)
+
+	of.write('\x00')
+	inf.close()
+	of.close()
 
 if __name__ == '__main__':
 	# Usage: blitz.py mapfile infile outfile
