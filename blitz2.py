@@ -15,8 +15,8 @@ def load_mapfile(filename):
 			kwToToken[keyword] = token
 			tokenToKw[token] = keyword
 
-def save(data):
-	out = str()
+def save(data, outfile):
+	out = bytes()
 	lines = data.split('\n')
 	for line in lines:
 		newLine = line
@@ -25,10 +25,13 @@ def save(data):
 			if word in kwToToken.keys():
 				newLine = newLine.replace(word, kwToToken[word])
 		out += newLine + '\00'
-	print '\00\00'
-	print out
+	out += '\00\00'
+
+	fd = open(outfile, "wb")
+	fd.write(out)
+	fd.close()
 
 if __name__ == '__main__':
 	# Usage: blitz.py mapfile infile outfile
 	load_mapfile(sys.argv[1])
-	save(open(sys.argv[2], "r").read())
+	save(open(sys.argv[2], "r").read(), sys.argv[3])
